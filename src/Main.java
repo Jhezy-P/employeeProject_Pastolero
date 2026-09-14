@@ -1,6 +1,6 @@
 import version1.HourlyEmployee;
 
-public static class Main {
+public class Main {
         public static void main(String[] args){
 
             HourlyEmployee employee1 = new HourlyEmployee();
@@ -30,4 +30,3 @@ public static class Main {
             System.out.println(employee2);
         }
     }
-}
