@@ -1,15 +1,33 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import version1.HourlyEmployee;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+public static class Main {
+        public static void main(String[] args){
+
+            HourlyEmployee employee1 = new HourlyEmployee();
+
+            employee1.setEmpID(101);
+            employee1.setEmpName("Jhezy Pastolero");
+            employee1.setTotalHoursWorked(40.0f);
+            employee1.setRatePerHour(150.00);
+
+            System.out.println("Employee 1");
+            employee1.displayHourlyEmployee();
+
+            System.out.println("\nUsing toString():");
+            System.out.println(employee1);
+
+            HourlyEmployee employee2 = new HourlyEmployee(
+                    102,
+                    "Nicholai Gayares",
+                    45.0f,
+                    200.00
+            );
+
+            System.out.println("\nEmployee 2");
+            employee2.displayHourlyEmployee();
+
+            System.out.println("\nUsing toString():");
+            System.out.println(employee2);
         }
     }
 }
