@@ -3,7 +3,7 @@ package version2;
 public class HourlyEmployee {
 
     private int empID;
-    private String empName;
+    private Name empName;
     private float totalHoursWorked;
     private double ratePerHour;
 
@@ -12,13 +12,9 @@ public class HourlyEmployee {
     private static final double OVERTIME_RATE = 1.5;
 
     public HourlyEmployee() {
-        empID = 0;
-        empName = "N/A";
-        totalHoursWorked = 0;
-        ratePerHour = 0;
     }
 
-    public HourlyEmployee(int empID, String empName) {
+    public HourlyEmployee(int empID, Name empName) {
         this.empID = empID;
         this.empName = empName;
         totalHoursWorked = 0;
@@ -26,7 +22,7 @@ public class HourlyEmployee {
     }
 
 
-    public HourlyEmployee(int empID, String empName,
+    public HourlyEmployee(int empID, Name empName,
                           float totalHoursWorked, double ratePerHour) {
         this.empID = empID;
         this.empName = empName;
@@ -39,7 +35,7 @@ public class HourlyEmployee {
         return empID;
     }
 
-    public String getEmpName() {
+    public Name getEmpName() {
         return empName;
     }
 
@@ -56,7 +52,7 @@ public class HourlyEmployee {
         this.empID = empID;
     }
 
-    public void setEmpName(String empName) {
+    public void setEmpName(Name empName) {
         this.empName = empName;
     }
 
