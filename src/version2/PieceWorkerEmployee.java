@@ -1,29 +1,33 @@
-package version1;
-
-import version2.Name;
+package version2;
 
 public class PieceWorkerEmployee {
 
     private int empID;
-    private String empName;
+    private Name empName;
     private int totalPiecesFinished;
     private double ratePerPiece;
+    private MyDate birthDate;
+    private MyDate dateHired;
 
     public PieceWorkerEmployee() {
     }
 
-    public PieceWorkerEmployee(int empID, String empName) {
+    public PieceWorkerEmployee(int empID, Name empName, MyDate birthDate, MyDate dateHired) {
         this.empID = empID;
         this.empName = empName;
+        this.birthDate = birthDate;
+        this.dateHired = dateHired;
         totalPiecesFinished = 0;
         ratePerPiece = 0;
     }
 
-    public PieceWorkerEmployee(int empID, String empName, double ratePerPiece, int totalPiecesFinished) {
+    public PieceWorkerEmployee(int empID, Name empName, double ratePerPiece, int totalPiecesFinished, MyDate birthDate, MyDate dateHired) {
         this.empID = empID;
         this.empName = empName;
         this.ratePerPiece = ratePerPiece;
         this.totalPiecesFinished = totalPiecesFinished;
+        this.birthDate = birthDate;
+        this.dateHired = dateHired;
     }
 
     public int getEmpID() {
@@ -34,11 +38,11 @@ public class PieceWorkerEmployee {
         this.empID = empID;
     }
 
-    public String getEmpName() {
+    public Name getEmpName() {
         return empName;
     }
 
-    public void setEmpName(String empName) {
+    public void setEmpName(Name empName) {
         this.empName = empName;
     }
 
@@ -58,6 +62,22 @@ public class PieceWorkerEmployee {
         this.totalPiecesFinished = totalPiecesFinished;
     }
 
+    public MyDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(MyDate birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public MyDate getDateHired() {
+        return dateHired;
+    }
+
+    public void setDateHired(MyDate dateHired) {
+        this.dateHired = dateHired;
+    }
+
     public double computeSalary(){
         double basePay = totalPiecesFinished * ratePerPiece;
         int completeHundreds = totalPiecesFinished / 100;
@@ -69,6 +89,8 @@ public class PieceWorkerEmployee {
     public void displayPieceWorkerEmployee(){
         System.out.println("Employee ID: " + empID);
         System.out.println("Employee Name: " + empName);
+        System.out.println("Birth Date: " + birthDate);
+        System.out.println("Date Hired: " + dateHired);
         System.out.println("Total Pieces Finished: " + totalPiecesFinished);
         System.out.println("Rate Per Piece: " + ratePerPiece);
     }
@@ -76,9 +98,11 @@ public class PieceWorkerEmployee {
     @Override
     public String toString(){
         return String.format(
-                "Employee ID: %d%n\n" + "Employee Name: %s%n\n" + "Total Pieces Finished: %d%n\n" + "Rate Per Piece: %.2f%n\n" + "Salary: %.2f\n",
+                "Employee ID: %d%n\n" + "Employee Name: %s%n\n" + "Birth Date: %s%n\n" + "Date Hired: %s%n\n" + "Total Pieces Finished: %d%n\n" + "Rate Per Piece: %.2f%n\n" + "Salary: %.2f\n",
                 empID,
                 empName,
+                birthDate,
+                dateHired,
                 totalPiecesFinished,
                 ratePerPiece,
                 computeSalary()

@@ -2,14 +2,11 @@ package version2;
 
 public class Name {
 
-    String firstName;
-    String lastName;
-    String middleInitial;
+    private String firstName;
+    private String lastName;
+    private String middleInitial;
 
     public Name() {
-        firstName = "N/A";
-        lastName = "N/A";
-        middleInitial = "N/A";
 
     }
 
@@ -51,7 +48,7 @@ public class Name {
     }
 
     public String getFullName() {
-        return firstName + " " + middleInitial + " " + lastName;
+        return firstName + " " + middleInitial + ". " + lastName;
     }
 
     @Override

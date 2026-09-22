@@ -9,15 +9,13 @@ public class MyDate {
 
 
     public MyDate() {
-        day = 0;
-        month = 0;
-        year = 0;
+
     }
 
     public MyDate(int day, int month) {
         this.day = day;
         this.month = month;
-        year = 0;
+        year = 2000;
     }
 
     public MyDate(int day, int month, int year) {
@@ -55,8 +53,8 @@ public class MyDate {
     }
 
     public void setYear(int year) {
-        if (year < 1930 || year > 2026) {
-            this.year = 2000;
+        if (year < 2000 || year > 2026) {
+            this.year = 2000 ;
         } else {
             this.year = year;
         }
